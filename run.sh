@@ -13,6 +13,12 @@ if [ "$1" == "--install" ]; then
   sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
   sudo update-alternatives --config python3
 
+  wget https://bootstrap.pypa.io/get-pip.py
+  python3.10 get-pip.py
+
+  python --version
+  uv --version
+
   pip install uv==0.6.14
 
   python --version
