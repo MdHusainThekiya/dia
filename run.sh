@@ -1,6 +1,5 @@
 #!/bin/bash
 if [ "$1" == "--install" ]; then
-  cd /content/
 
   python --version
   uv --version
@@ -15,9 +14,6 @@ if [ "$1" == "--install" ]; then
   sudo update-alternatives --config python3
 
   pip install uv==0.6.14
-
-  git clone https://github.com/MdHusainThekiya/dia.git
-  cd dia
 
   python --version
   uv --version
